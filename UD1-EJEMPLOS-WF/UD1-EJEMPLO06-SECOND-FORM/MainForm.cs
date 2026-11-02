@@ -44,7 +44,8 @@ namespace UD1_EJEMPLO06_SECOND_FORM
             }
             else if(RbFamily.Checked)
             {
-                using (family_form = new UD1_EJEMPLO05A_DATA_BIND.Form1()) //referencias mb2 -> agregar referencia
+                using (family_form = new UD1_EJEMPLO05A_DATA_BIND.Form1()) //para uar esta forma
+                                                                           //referencias mb2 -> agregar referencia
                 {
                     family_form.ShowDialog();
                 }

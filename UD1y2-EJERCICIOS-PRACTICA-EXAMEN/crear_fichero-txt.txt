@@ -1,0 +1,31 @@
+1. Cuadro de diálogo para guardar fichero:
+
+SaveFileDialog saveFileDialog = new SaveFileDialog();
+saveFileDialog.Filter = "Ficheros de texto (*.txt)|*.txt|Todos los ficheros (*.*)|*.*";
+saveFileDialog.DefaultExt = "txt";
+saveFileDialog.FileName = "Inscripcion";
+
+
+2. Preparar datos (uno por línea):
+string[] lineas = new string[]
+{
+    $"Corredor: {TxtNombre.Text}",
+    $"Edad: {NumEdad.Value}",
+    $"Distancia: {ObtenerDistancia()}",
+    $"Talla de camiseta: {CbTallas.SelectedItem}",
+    $"Socio del club: {(CBtnSocio.Checked ? "Sí" : "No")}",
+    $"Precio: {CalculoPrecio()} €"
+};
+
+
+3. Escribir en fichero:
+System.IO.File.WriteAllLines(saveFileDialog.FileName, lineas);
+
+
+4. Mostrar mensaje con la ruta:
+MessageBox.Show(
+    $"Inscripción guardada correctamente en:\n{saveFileDialog.FileName}",
+    "Éxito",
+    MessageBoxButtons.OK,
+    MessageBoxIcon.Information
+);
