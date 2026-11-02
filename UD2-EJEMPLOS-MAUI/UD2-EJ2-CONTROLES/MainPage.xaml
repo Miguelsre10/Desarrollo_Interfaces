@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UD2_EJ2_CONTROLES.MainPage"
+             Title="EJEMPLOS DE CONTROLES DE .NET MAUI">
+
+    <ScrollView>
+
+        <VerticalStackLayout Padding="10" Spacing="15">
+
+            <!-- CONTROL BORDE: Solo un elemento en su interior-->
+            <Label Text="CONTROL BORDE"
+                   FontSize="12"
+                   FontAttributes="Bold"
+                   />
+
+            <Border Stroke="CornflowerBlue" 
+                    StrokeThickness="5"
+                    StrokeShape="RoundRectangle 10,1,0,500"
+                    BackgroundColor="#2B0B98">
+            
+                <Label Text="TEMA 2 .NET MAUI"
+                       FontSize="18"
+                       FontAttributes="Bold"
+                       Padding="10"
+                       TextColor="AliceBlue"
+                        />
+            </Border>
+        
+            <!-- CONTROL BOXVIEW -->
+            <Label Text="CONTROL BOXVIEW"
+                   FontSize="12"
+                   FontAttributes="Bold"
+                   />
+
+            <BoxView Color="Coral"
+                     WidthRequest="450"
+                     HeightRequest="30"
+                     />
+        
+            <!-- CONTROL DATEPICKER -->
+            <Label Text="CONTROL DATEPICKER"
+                   FontSize="12"
+                   FontAttributes="Bold"
+                   />
+
+            <DatePicker MinimumDate="01/01/2025"
+                        MaximumDate="12/31/2025"
+                        Date="06/01/2025"
+                        />
+
+            <!-- CONTROL FRAME [OBSOLETO] -> SUSTITUIDO POR <Border> -->
+            <Label Text="CONTROL DATEPICKER"
+                   FontSize="12"
+                   FontAttributes="Bold"
+                   />
+
+            <Frame BackgroundColor="#2B0B98"
+                   CornerRadius="10"
+                   >
+            
+                <Label Text="TEMA 2 .NET MAUI"
+                       FontSize="18"
+                       FontAttributes="Bold"
+                       Padding="10"
+                       TextColor="AliceBlue"
+                        />
+            </Frame>
+
+            <!-- CONTROL EDITOR -->
+            <Label Text="CONTROL EDITOR"
+                   FontSize="12"
+                   FontAttributes="Bold"
+                   />
+
+            <Editor BackgroundColor="Aqua"
+                    Placeholder="Escribe tu comentario aqui:"
+                    HeightRequest="100"/>
+
+            <!-- CONTROL ACTIVIDAD -->
+            <Label Text="CONTROL ACTIVIDAD"
+                   FontSize="12"
+                   FontAttributes="Bold"
+                   />
+
+            <ActivityIndicator IsRunning="True"
+                               HorizontalOptions="Start"/>
+
+            <!-- CONTROL IMAGEN Y BOTON IMAGEN -->
+            <Label Text="CONTROL IMAGEN Y BOTON IMAGEN"
+                   FontSize="12"
+                   FontAttributes="Bold"
+                   />
+
+            <Image Source="dotnet_bot.png"
+                   WidthRequest="200"
+                   HeightRequest="100"/>
+            
+            <ImageButton Source="dotnet_bot.png"
+                         WidthRequest="200"
+                         HeightRequest="100"
+                         Clicked="ImageButton_Clicked"
+                         />
+
+            <!-- CONTROL SWITCH SLIDER Y CHECKBOX -->
+            <Label Text="CONTROL SWITCH SLIDER Y CHECKBOX"
+                   FontSize="12"
+                   FontAttributes="Bold"
+                   />
+
+            <Switch IsToggled="False"/>
+
+            <Slider Maximum="255" Minimum="0" />
+
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+
+</ContentPage>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:UD2_EJ7_CAROUSEL.Views" 
+             xmlns:models="clr-namespace:UD2_EJ7_CAROUSEL.Models"
+             x:Class="UD2_EJ7_CAROUSEL.Views.CarouselPage"
+             x:DataType="views:CarouselPage">
+    
+    <!-- importante: 
+        xmlns:views="clr-namespace:UD2_EJ7_CAROUSEL.Views" 
+        xmlns:models="clr-namespace:UD2_EJ7_CAROUSEL.Models" 
+        x:DataType="views:CarouselPage" (Conecta el codebehind con el xaml)
+    -->
+
+    <!-- AL ESTAR EN VIEWS HAY QUE CAMBIAR AppShell.xaml 
+                xmlns:local="clr-namespace:UD2_EJ7_CAROUSEL.Views" 
+                ContentTemplate="{DataTemplate local:CarouselPage}" 
+    -->
+
+    <VerticalStackLayout Spacing="10" Padding="10,5" BackgroundColor="SteelBlue">
+        <Label 
+            Text="CATALOGO DE JUGUETES"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            FontSize="20"
+            FontAttributes="Bold"
+            TextColor="White"
+            />
+
+        <CarouselView ItemsSource="{Binding ListToys}"
+                      IndicatorView="MyIndicatorView"
+                      CurrentItem="{Binding SelectedToy}">
+            
+            <CarouselView.ItemTemplate>
+                <!-- Para conectar el xaml con la clase Toy -->
+                <DataTemplate x:DataType="models:Toy">
+                    <Border StrokeShape="RoundRectangle 10" StrokeThickness="2" BackgroundColor="OrangeRed">
+                        <VerticalStackLayout>
+                            <Label Text="{Binding NameToy}"/>
+                            <Image Source="{Binding ImageToy}" Aspect="AspectFit" HeightRequest="200"/>
+                            <Label Text="{Binding AgeRecomended, StringFormat='Edad Recomendada {0} años'}" BackgroundColor="Green" />
+                            <Label Text="{Binding PriceToy, StringFormat='Precio del juguete {0}€'}" BackgroundColor="YellowGreen" />
+                        </VerticalStackLayout>
+                        
+                        
+                    </Border>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+
+        <IndicatorView x:Name="MyIndicatorView" HorizontalOptions="Center"
+                       IndicatorColor="Black"
+                       SelectedIndicatorColor="OrangeRed"/>
+
+        <Border StrokeShape="RoundRectangle 10" StrokeThickness="2" BackgroundColor="White" Padding="10">
+            <VerticalStackLayout HorizontalOptions="Center">
+                <Label Text="Detalles del precio del juguete:"
+                       FontSize="12" FontAttributes="Bold"/>
+                <Label Text="{Binding SelectedToy.PriceToy, StringFormat='Precio: {0}€'}"
+                       FontSize="12" FontAttributes="Bold"/>
+
+            </VerticalStackLayout>
+        </Border>
+                
+    </VerticalStackLayout>
+</ContentPage>

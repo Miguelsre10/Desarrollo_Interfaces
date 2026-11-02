@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UD2_EJ2_APPBANCO.MainPage"
+             xmlns:local="clr-namespace:UD2_EJ2_APPBANCO"
+             x:DataType="local:MainPage"
+             BackgroundColor="LightGrey">
+
+    <!-- 
+    xmlns:local="clr-namespace:UD2_EJ2_APPBANCO"
+    x:DataType="local:MainPage"
+    -->
+    <!-- ambos sirven para mantener el intellisense" -->
+    
+    <ScrollView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Menu superior -->
+            <Border Grid.Row="0" BackgroundColor="White" Margin="10"  StrokeShape="RoundRectangle 10,10,10,10" Padding="15,3" StrokeThickness="2">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    
+                    <Image Grid.Column="0"
+                        Source="usericon.png" WidthRequest="40" HeightRequest="40" />
+                    <VerticalStackLayout Grid.Column="1" HorizontalOptions="Center" >
+                        <Label Text="Total Balance:"/>
+                        <Label Text="€40.000" FontAttributes="Bold"/>
+                    </VerticalStackLayout>
+                    <Image Grid.Column="2"
+                           Source="notif.png" WidthRequest="40" HeightRequest="40" />
+                </Grid>
+                
+            </Border>
+
+            <!-- Tarjeta credito -->
+            <Image Grid.Row="1" Source="tarjetacredito.png"/>
+
+            <!-- Acciones -->
+            <Border Grid.Row="2" BackgroundColor="White" Margin="10"  StrokeShape="RoundRectangle 10,10,10,10" Padding="15,3" StrokeThickness="2">
+                <Grid Padding="5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <Image Grid.Column="0" Grid.Row="0"
+                        Source="deposito.png" WidthRequest="50" HeightRequest="50" />
+                    <Image Grid.Column="1" Grid.Row="0"
+                        Source="retiro.png" WidthRequest="50" HeightRequest="50" />
+                    <Image Grid.Column="2" Grid.Row="0"
+                        Source="transferencia.png" WidthRequest="50" HeightRequest="50" />
+
+                    <Label HorizontalTextAlignment="Center" Grid.Column="0" Grid.Row="1" Text="Deposito:"/>
+                    <Label HorizontalTextAlignment="Center" Grid.Column="1" Grid.Row="1" Text="Retirada:"/>
+                    <Label HorizontalTextAlignment="Center" Grid.Column="2" Grid.Row="1" Text="Transferencia:"/>
+
+                </Grid>
+            </Border>
+
+            <!-- historial transacciones -->
+            <Border Grid.Row="3" StrokeShape="RoundRectangle 10,10,10,10" Margin="10" Padding="15,5" BackgroundColor="White" StrokeThickness="2">
+                <CollectionView ItemsSource="{Binding Transacciones}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="x:String">
+                            <!--   <TextCell Text="{Binding .}"  TextColor="Black"/> -->
+                            <Label Text="{Binding .}" 
+                                   FontSize="14" 
+                                   Padding="0,5"
+                                />
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+
+                </CollectionView>
+            </Border>
+
+        </Grid>
+    </ScrollView>
+
+</ContentPage>

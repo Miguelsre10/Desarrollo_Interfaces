@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UD2_EJ3_PIZZERIA_SUBIR_NOTA.Views.PersonalizationPage"
+             xmlns:views="clr-namespace:UD2_EJ3_PIZZERIA_SUBIR_NOTA.Views"
+             xmlns:models="clr-namespace:UD2_EJ3_PIZZERIA_SUBIR_NOTA.Models"
+             x:DataType="views:PersonalizationPage"
+             Title="PersonalizationPage">
+
+    <VerticalStackLayout Padding="20">
+        <Label 
+            Text="Ingredientes adicionales" FontSize="24" FontAttributes="Bold"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            Margin="0,0,0,30"/>
+
+        <HorizontalStackLayout VerticalOptions="Center">
+            <CheckBox x:Name="ChkQueso"/>
+            <Label Text="Queso" VerticalTextAlignment="Center"/>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout VerticalOptions="Center">
+            <CheckBox x:Name="ChkJamon"/>
+            <Label Text="Jamón" VerticalTextAlignment="Center"/>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout VerticalOptions="Center">
+            <CheckBox x:Name="ChkChampin"/>
+            <Label Text="Champiñones" VerticalTextAlignment="Center"/>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout VerticalOptions="Center">
+            <CheckBox x:Name="ChkAceitunas"/>
+            <Label Text="Aceitunas" VerticalTextAlignment="Center"/>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout VerticalOptions="Center">
+            <CheckBox x:Name="ChkPimientos"/>
+            <Label Text="Pimientos" VerticalTextAlignment="Center"/>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout HorizontalOptions="Center" Spacing="30">
+            <Button 
+                Text="Volver" 
+                Margin="0,20,0,0"
+                x:Name="BtnPersonalization_volver"
+                Clicked="BtnPersonalization_volver_Clicked"/>
+            
+            <Button 
+                Text="Siguiente" 
+                Margin="0,20,0,0"
+                x:Name="BtnPersonalization_siguiente" 
+                Clicked="BtnPersonalization_siguiente_Clicked"
+                />
+        </HorizontalStackLayout>
+
+
+    </VerticalStackLayout>
+</ContentPage>

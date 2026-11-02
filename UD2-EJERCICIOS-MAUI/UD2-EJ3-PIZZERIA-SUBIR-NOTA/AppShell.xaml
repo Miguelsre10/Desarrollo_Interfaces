@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="UD2_EJ3_PIZZERIA_SUBIR_NOTA.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:UD2_EJ3_PIZZERIA_SUBIR_NOTA.Views"
+    >
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:TypeSelectionPage}"/>
+           <!-- Cambiar el MainPage para probar las paginas -->
+</Shell>

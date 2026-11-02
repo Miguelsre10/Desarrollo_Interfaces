@@ -1,0 +1,11 @@
+<Solution>
+  <Project Path="UD2-EJ1/UD2-EJ1.csproj">
+    <Deploy Solution="Debug|*" />
+  </Project>
+  <Project Path="UD2-EJ2-APPBANCO/UD2-EJ2-APPBANCO.csproj" Id="18878fcc-9386-4b5a-b0f2-c2924d1380c8">
+    <Deploy Solution="Debug|*" />
+  </Project>
+  <Project Path="UD2-EJ3-PIZZERIA-SUBIR-NOTA/UD2-EJ3-PIZZERIA-SUBIR-NOTA.csproj" Id="0c8f7e75-394f-4036-8d7a-1d42fe38b13a">
+    <Deploy Solution="Debug|*" />
+  </Project>
+</Solution>

@@ -1,0 +1,8 @@
+<Solution>
+  <Project Path="UD1-EJEMPLO01-MOVIES/UD1-EJEMPLO01-MOVIES.csproj" Id="fa7a2139-6385-4c43-999a-1019e205a4de" />
+  <Project Path="UD1-EJEMPLO02-QUIZ/UD1-EJEMPLO02-QUIZ.csproj" Id="07b5286f-d93c-4f0a-8942-1511cd89ba5d" />
+  <Project Path="UD1-EJEMPLO05A-DATA-BIND/UD1-EJEMPLO05A-DATA-BIND.csproj" Id="8cb71063-95f5-40b0-b246-a69bd9602473" />
+  <Project Path="UD1-EJEMPLO06-SECOND-FORM/UD1-EJEMPLO06-SECOND-FORM.csproj" Id="5f4482fa-83b1-4a0f-b886-4fdba9d36253" />
+  <Project Path="UD1-EjemplosColorDialog/UD1-EJEMPLO04-ColorDialog.csproj" Id="3166fb6d-0a50-4f27-b4d4-065e0f33aabc" />
+  <Project Path="WinFormsApp3/UD1-EJEMPLO03-Componentes.csproj" />
+</Solution>

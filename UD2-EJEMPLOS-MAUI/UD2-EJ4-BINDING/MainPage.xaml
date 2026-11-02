@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UD2_EJ4_BINDING.MainPage"
+             Title="EJEMPLO DE BINDING CONTROLES">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25"
+            BackgroundColor="SteelBlue">
+            
+            <!-- PRIMER BLOQUE: ENTRY DESTINO DEL BINDINDIG -->
+            <HorizontalStackLayout Spacing="10" Padding="10,30">
+                
+                <Label Text="Destino Binding" Margin="0,10,0,0"/>
+                <Entry Text="{Binding Source={x:Reference MySlider}, Path=Value, Mode=TwoWay, StringFormat='{0:F0}'}"
+                       WidthRequest="100"
+                       Margin="0,0,0,30"
+                       IsReadOnly="False"/>
+                
+            </HorizontalStackLayout>
+
+
+            <!-- SEGUNDO BLOQUE: SLIDER DESTINO DEL BINDINDIG -->
+            <HorizontalStackLayout Spacing="10" Padding="10,30">
+
+                <Label Text="Origen Binding"/>
+                <Slider WidthRequest="200" Minimum="0" Maximum="100"
+                        x:Name="MySlider"/>
+
+            </HorizontalStackLayout>
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

@@ -1,0 +1,23 @@
+<Solution>
+  <Project Path="UD2-EJ1.MAUI/UD2-EJ1.MAUI.csproj">
+    <Deploy Solution="Debug|*" />
+  </Project>
+  <Project Path="UD2-EJ2-CONTROLES/UD2-EJ2-CONTROLES.csproj" Id="051ad182-9fc6-4480-8361-22aa31fe6830">
+    <Deploy Solution="Debug|*" />
+  </Project>
+  <Project Path="UD2-EJ3-LAYOUTS/UD2-EJ3-LAYOUTS.csproj" Id="32ab2aef-657e-49aa-a89a-566d77953ef9">
+    <Deploy Solution="Debug|*" />
+  </Project>
+  <Project Path="UD2-EJ4-BINDING/UD2-EJ4-BINDING.csproj" Id="4f040660-3054-4c6d-ad5d-59058ee5e136">
+    <Deploy Solution="Debug|*" />
+  </Project>
+  <Project Path="UD2-EJ5-INOTIFYPROPERTYCHANGED/UD2-EJ5-INOTIFYPROPERTYCHANGED.csproj" Id="c88058b2-99a2-4cd4-8637-d96ffa4ea09a">
+    <Deploy Solution="Debug|*" />
+  </Project>
+  <Project Path="UD2-EJ6-PAGES-MAUI/UD2-EJ6-PAGES-MAUI.csproj" Id="84105bb4-cc22-4e62-9ba0-22a44459fd93">
+    <Deploy Solution="Debug|*" />
+  </Project>
+  <Project Path="UD2-EJ7-CAROUSEL/UD2-EJ7-CAROUSEL.csproj" Id="69383aee-0c8d-4df9-a77a-3bc048fdbcd7">
+    <Deploy Solution="Debug|*" />
+  </Project>
+</Solution>

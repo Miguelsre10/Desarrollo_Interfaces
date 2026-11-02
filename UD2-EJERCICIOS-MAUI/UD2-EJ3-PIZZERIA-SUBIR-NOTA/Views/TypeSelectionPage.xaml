@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UD2_EJ3_PIZZERIA_SUBIR_NOTA.Views.TypeSelectionPage"
+             xmlns:views="clr-namespace:UD2_EJ3_PIZZERIA_SUBIR_NOTA.Views"
+             xmlns:models="clr-namespace:UD2_EJ3_PIZZERIA_SUBIR_NOTA.Models"
+             x:DataType="views:TypeSelectionPage"
+             Title="TypeSelectionPage"
+             >
+    <ScrollView>
+        <VerticalStackLayout Padding="20" >
+            <Label 
+                Text="Bienvenido a la pizzeria" FontSize="24" FontAttributes="Bold"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                Margin="0,0,0,30"/>
+
+            <Label Text="Tipo de Pizza"/>
+            <Picker x:Name="TypePicker" ItemsSource="{Binding PizzaTypes}">
+            </Picker>
+
+            <Label 
+                Text="{Binding Source={x:Reference Slider_Cantidad}, Path=Value, Mode=OneWay, StringFormat='Cantidad: {0:f0}'}"
+                Margin="0,20,0,0"/>
+            <Slider x:Name="Slider_Cantidad" Minimum="1" Maximum="12"/>
+
+            <Button 
+                Text="Siguiente" 
+                Margin="0,20,0,0"
+                x:Name="BtnTypeSelection_siguiente" 
+                Clicked="BtnTypeSelection_siguiente_Clicked"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

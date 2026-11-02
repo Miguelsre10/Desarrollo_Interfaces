@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UD2_EJ1.MainPage"
+             x:Name="Pagina"
+             BackgroundColor="#000000">
+    
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <Border Stroke="Black" 
+                    StrokeThickness="2"
+                    StrokeShape="RoundRectangle 10"
+                    BackgroundColor="White">
+
+                <VerticalStackLayout Spacing="5"
+                                     Padding="20">
+                    
+                    <Label Text="Red"
+                           FontSize="14"
+                           FontAttributes="Bold"/>
+                    <Slider  Maximum="255"
+                             Minimum="0"
+                             x:Name="Slider_red"
+                             ValueChanged="Slider_red_ValueChanged"/>
+
+                    
+                    <Label Text="Green"
+                           FontSize="14"
+                           FontAttributes="Bold"/>
+                    <Slider  Maximum="255"
+                             Minimum="0"
+                             x:Name="Slider_green"
+                             ValueChanged="Slider_green_ValueChanged"/>
+
+                    
+                    <Label Text="Blue"
+                           FontSize="14"
+                           FontAttributes="Bold"/>
+                    <Slider  Maximum="255"
+                             Minimum="0"
+                             x:Name="Slider_blue"
+                             ValueChanged="Slider_blue_ValueChanged"/>
+
+                    <Border StrokeThickness="2"
+                            StrokeShape="RoundRectangle 50"
+                            MaximumWidthRequest="240"
+                            Padding="20"
+                            Margin="0,10,0,10">
+
+                        <Label Text="Hex Color: #000000"
+                               FontSize="14"
+                               x:Name="Lcolor"/>
+                    </Border>
+
+                    <Button Text="Generar Color aleatorio"
+                            MaximumWidthRequest="300"
+                            Background="#000000"
+                            x:Name="BtnRandom"
+                            Clicked="BtnRandom_Clicked"
+                            />
+
+
+                </VerticalStackLayout>
+                
+            </Border>
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
