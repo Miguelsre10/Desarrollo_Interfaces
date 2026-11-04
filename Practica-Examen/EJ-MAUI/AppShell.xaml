@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="EJ_MAUI.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:EJ_MAUI.Views"
+    Title="EJ_MAUI">
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:Agenda}"
+        Route="Agenda" />
+
+</Shell>

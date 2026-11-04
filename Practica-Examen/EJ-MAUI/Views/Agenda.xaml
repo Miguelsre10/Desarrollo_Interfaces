@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="cle-namespace:EJ-MAUI.Views"
+             xmlns:model="cle-namespace:EJ-MAUI.Models"
+             x:DataType="Agenda"
+             x:Class="EJ_MAUI.Views.Agenda"
+             Title="Mis Debers">
+
+    <Grid Padding="20,10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <!-- FORMULARIO -->
+        <VerticalStackLayout Grid.Row="0" Spacing="10" >
+            <HorizontalStackLayout>
+                <Image Source="libreta.png" HeightRequest="50" WidthRequest="50"/>
+                <Label Text="Agende de deberes"
+                       FontSize="24"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center"
+                       TextColor="#0D47A1"/>
+            </HorizontalStackLayout>
+
+            <Entry x:Name="DescripcionEntry" Placeholder="Descripcion tarea"/>
+
+            <Picker x:Name="ModuloPicker">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Desarrollo de Interfaces</x:String>
+                        <x:String>Acceso a Datos</x:String>
+                        <x:String>Sistemas de Gestion Empresarial</x:String>
+                        <x:String>Optativa</x:String>
+                        <x:String>Programacion de Procesos y Servicios</x:String>
+                        <x:String>Proyecto intermodular</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <HorizontalStackLayout>
+                <Label Text="Fecha de entrega" 
+                       FontSize="24"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center"
+                       TextColor="#0D47A1"/>
+                <DatePicker x:Name="FechaPicker" Format="dd/MM/yyyy"/>
+            </HorizontalStackLayout>
+
+            <Button x:Name="BtnAnadir" Text="Añadir Tarea" Clicked="BtnAnadir_Clicked"/>
+
+        </VerticalStackLayout>
+        
+        <!-- -->
+
+        <Label Grid.Row="1" x:Name="LblTareas" Text="Lista de Tareas"/>
+
+        <!-- -->
+
+        <CollectionView ItemsSource="{Binding Agenda}" Grid.Row="2">
+            <CollectionView.ItemTemplate>
+                <DataTemplate >
+            
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+
+    <Border StrokeShape="RoundRectangle 10" StrokeThickness="2"
+            BackgroundColor="AliceBlue">
+
+        <VerticalStackLayout Spacing="50">
+            <Label Text="{Binding Descripcion}" FontSize="16"/>
+            <Label Text="{Binding Descripcion}" FontSize="16"/>
+            <Label Text="{Binding Descripcion}, StringFormat='Entrega: 0:dd:MM:yyy'" FontSize="16"/>
+        </VerticalStackLayout>
+    </Border>
+
+</ContentPage>

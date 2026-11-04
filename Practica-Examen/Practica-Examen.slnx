@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="EJ-MAUI/EJ-MAUI.csproj" />
+  <Project Path="EJ-WinForm/EJ-WinForm.csproj" Id="0fbe71f1-6f06-4f9e-b266-a9f173aa1f0d" />
+</Solution>
