@@ -5,10 +5,12 @@ namespace EJ_MAUI.Views;
 
 public partial class Agenda : ContentPage
 {
-    public ObservableCollection<Tarea> AgendaTareas { set; get; } = new ObservableCollection<Tarea>();
+	public ObservableCollection<Tarea> AgendaTareas { set; get; } = new ObservableCollection<Tarea>();
+
 	public Agenda()
 	{
 		InitializeComponent();
+		this.BindingContext = this;
 	}
 
     private async void BtnAnadir_Clicked(object sender, EventArgs e)
@@ -33,7 +35,7 @@ public partial class Agenda : ContentPage
         });
 
     }
-
+    /*
 	private async bool Validacion() {
 		if(DescripcionEntry.Text == "")
 		{
@@ -47,4 +49,5 @@ public partial class Agenda : ContentPage
         }
 		return true; 
 	}
+    */
 }

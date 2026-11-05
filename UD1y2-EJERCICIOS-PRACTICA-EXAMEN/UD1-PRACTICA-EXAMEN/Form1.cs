@@ -56,7 +56,7 @@ namespace UD1_PRACTICA_EXAMEN
         {
             int descuento = 0;
             int precio = 0;
-            if (CBtnSocio.Checked)
+            if (ChkSocio.Checked)
             {
                 descuento = 3;
             }
@@ -89,7 +89,7 @@ namespace UD1_PRACTICA_EXAMEN
                     resumen.Nombre = $"Corredor: {TxtNombre.Text}";
                     resumen.Edad = $"Edad: {NumEdad.Value}";
                     resumen.Talla = $"Talla de camiseta: {CbTallas.SelectedItem}";
-                    resumen.Socio = $"Socio del club: {(CBtnSocio.Checked ? "Sí" : "No")}";
+                    resumen.Socio = $"Socio del club: {(ChkSocio.Checked ? "Sí" : "No")}";
                     resumen.Precio = $"Precio: {CalculoPrecio()} €";
 
                     // Distania
@@ -120,7 +120,7 @@ namespace UD1_PRACTICA_EXAMEN
                     resumen.Nombre = TxtNombre.Text;
                     resumen.Edad = (int)NumEdad.Value;
                     resumen.Talla = CbTallas.SelectedItem.ToString();
-                    resumen.Socio = CBtnSocio.Checked;
+                    resumen.Socio = ChkSocio.Checked;
                     resumen.Precio = CalculoPrecio();
 
                     // Determinar qué distancia se eligió
@@ -160,7 +160,7 @@ namespace UD1_PRACTICA_EXAMEN
                             $"Edad: {NumEdad.Value}",
                             $"Distancia: {ObtenerDistancia()}",
                             $"Talla de camiseta: {CbTallas.SelectedItem}",
-                            $"Socio del club: {(CBtnSocio.Checked ? "Sí" : "No")}",
+                            $"Socio del club: {(ChkSocio.Checked ? "Sí" : "No")}",
                             $"Precio: {CalculoPrecio()} €"
                         };
 

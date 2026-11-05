@@ -39,7 +39,7 @@
             this.RbtnDistancia5 = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
             this.CbTallas = new System.Windows.Forms.ComboBox();
-            this.CBtnSocio = new System.Windows.Forms.CheckBox();
+            this.ChkSocio = new System.Windows.Forms.CheckBox();
             this.BtnResumen = new System.Windows.Forms.Button();
             this.BtnInscripcion = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.NumEdad)).BeginInit();
@@ -161,20 +161,20 @@
             // 
             this.CbTallas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CbTallas.FormattingEnabled = true;
-            this.CbTallas.Location = new System.Drawing.Point(203, 322);
+            this.CbTallas.Location = new System.Drawing.Point(191, 322);
             this.CbTallas.Name = "CbTallas";
             this.CbTallas.Size = new System.Drawing.Size(171, 24);
             this.CbTallas.TabIndex = 7;
             // 
-            // CBtnSocio
+            // ChkSocio
             // 
-            this.CBtnSocio.AutoSize = true;
-            this.CBtnSocio.Location = new System.Drawing.Point(58, 387);
-            this.CBtnSocio.Name = "CBtnSocio";
-            this.CBtnSocio.Size = new System.Drawing.Size(203, 20);
-            this.CBtnSocio.TabIndex = 8;
-            this.CBtnSocio.Text = "Socio del club atletismo (-3 €)";
-            this.CBtnSocio.UseVisualStyleBackColor = true;
+            this.ChkSocio.AutoSize = true;
+            this.ChkSocio.Location = new System.Drawing.Point(58, 387);
+            this.ChkSocio.Name = "ChkSocio";
+            this.ChkSocio.Size = new System.Drawing.Size(203, 20);
+            this.ChkSocio.TabIndex = 8;
+            this.ChkSocio.Text = "Socio del club atletismo (-3 €)";
+            this.ChkSocio.UseVisualStyleBackColor = true;
             // 
             // BtnResumen
             // 
@@ -203,7 +203,7 @@
             this.ClientSize = new System.Drawing.Size(620, 582);
             this.Controls.Add(this.BtnInscripcion);
             this.Controls.Add(this.BtnResumen);
-            this.Controls.Add(this.CBtnSocio);
+            this.Controls.Add(this.ChkSocio);
             this.Controls.Add(this.CbTallas);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.GbDistancia);
@@ -214,6 +214,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -239,7 +240,7 @@
         private System.Windows.Forms.RadioButton RbtnDistanciaMM;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox CbTallas;
-        private System.Windows.Forms.CheckBox CBtnSocio;
+        private System.Windows.Forms.CheckBox ChkSocio;
         private System.Windows.Forms.Button BtnResumen;
         private System.Windows.Forms.Button BtnInscripcion;
     }
