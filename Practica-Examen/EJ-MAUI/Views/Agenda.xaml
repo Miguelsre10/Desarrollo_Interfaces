@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="cle-namespace:EJ-MAUI.Views"
+             xmlns:model="cle-namespace:EJ-MAUI.Models"
+             x:DataType="Agenda"
              x:Class="EJ_MAUI.Views.Agenda"
-             xmlns:views="clr-namespace:EJ_MAUI.Views"
-             xmlns:models="clr-namespace:EJ_MAUI.Models"
-             x:DataType="views:Agenda"
              Title="Mis Debers">
 
     <Grid Padding="20,10">
@@ -59,22 +59,23 @@
 
         <!-- -->
 
-        <CollectionView ItemsSource="{Binding AgendaTareas}" Grid.Row="2">
+        <CollectionView ItemsSource="{Binding Agenda}" Grid.Row="2">
             <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    
-                    <Border StrokeShape="RoundRectangle 10" StrokeThickness="2"
-                            BackgroundColor="AliceBlue">
-                        <VerticalStackLayout Spacing="10">
-                            <Label Text="{Binding Descripcion}" FontSize="16"/>
-                            <Label Text="{Binding Asignatura}" FontSize="14"/>
-                            <Label Text="{Binding FechaEntrega, StringFormat='Entrega: {0:dd/MM/yyyy}'}" FontSize="14"/>
-                        </VerticalStackLayout>
-                    </Border>
-                    
+                <DataTemplate >
+            
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
     </Grid>
+
+    <Border StrokeShape="RoundRectangle 10" StrokeThickness="2"
+            BackgroundColor="AliceBlue">
+
+        <VerticalStackLayout Spacing="50">
+            <Label Text="{Binding Descripcion}" FontSize="16"/>
+            <Label Text="{Binding Descripcion}" FontSize="16"/>
+            <Label Text="{Binding Descripcion}, StringFormat='Entrega: 0:dd:MM:yyy'" FontSize="16"/>
+        </VerticalStackLayout>
+    </Border>
 
 </ContentPage>

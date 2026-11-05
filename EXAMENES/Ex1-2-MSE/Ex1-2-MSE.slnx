@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Ej-MAUI/Ej-MAUI.csproj">
+    <Deploy Solution="Debug|*" />
+  </Project>
+  <Project Path="EJ-WF/EJ-WF.csproj" Id="027a2f0a-0165-4b89-9f1c-6781b4b7a21f" />
+</Solution>

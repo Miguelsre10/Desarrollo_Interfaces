@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Ej_MAUI.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Ej_MAUI.Views"
+    Title="Ej_MAUI">
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:PizzaPage}"
+        Route="MainPage" />
+
+</Shell>

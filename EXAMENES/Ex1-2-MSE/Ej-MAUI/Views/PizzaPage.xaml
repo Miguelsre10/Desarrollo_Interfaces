@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ej_MAUI.Views.PizzaPage"
+             xmlns:views="clr-namespace:Ej_MAUI.Views"
+             xmlns:models="clr-namespace:Ej_MAUI.Models"
+             x:DataType="views:PizzaPage">
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="15">
+
+            <!-- titulo logo-->
+            <Image
+                Source="pizza.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                />
+
+            <Label
+                Text="Configurador de pizza"
+                TextColor="red"
+                FontSize="30"
+                />
+
+            <!-- Tamaño -->
+
+            <Label
+                Text="Selecciona el tamaño"
+                TextColor="DarkRed"
+                FontSize="18"
+                />
+
+            <HorizontalStackLayout>
+                <RadioButton x:Name="RBtnPequena"  GroupName="tamano" IsChecked="True" CheckedChanged="RBtnPequena_CheckedChanged"/>
+                <Label Text=" PEqueña (8€)"/>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout>
+                <RadioButton x:Name="RBtnMedidana"  GroupName="tamano" CheckedChanged="RBtnMedidana_CheckedChanged"/>
+                <Label Text=" Mediana (12€)"/>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout>
+                <RadioButton  x:Name="RBtnGrande" GroupName="tamano" CheckedChanged="RBtnGrande_CheckedChanged"/>
+                <Label Text=" Grande (16€)"/>
+            </HorizontalStackLayout>
+
+            <!-- ingradienrs -->
+
+            <Label
+                Text="Ingreadientes adiccionales (+1.50€/u)"
+                TextColor="DarkRed"
+                FontSize="18"
+                />
+
+            <HorizontalStackLayout>
+                <CheckBox x:Name="ChkJamon" CheckedChanged="ChkJamon_CheckedChanged"/>
+                <Label Text="jamon"/>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout>
+                <CheckBox  x:Name="ChkChampi" CheckedChanged="ChkChampi_CheckedChanged"/>
+                <Label Text="champiñones"/>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout>
+                <CheckBox  x:Name="ChkAceitunas" CheckedChanged="ChkAceitunas_CheckedChanged"/>
+                <Label Text="aceitunas"/>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout>
+                <CheckBox  x:Name="ChkPina" CheckedChanged="ChkPina_CheckedChanged"/>
+                <Label Text="piña" />
+            </HorizontalStackLayout>
+
+
+            <!--cantidad-->
+
+            <Label
+                Text="Ingreadientes adiccionales (+1.50€/u)"
+                TextColor="DarkRed"
+                FontSize="18"
+                />
+
+            <Slider x:Name="Slider_Cantidad" Minimum="1" Maximum="10" ValueChanged="Slider_Cantidad_ValueChanged"/>
+            <Label 
+                Text="{Binding Source={x:Reference Slider_Cantidad}, Path=Value, Mode=OneWay, StringFormat='{0:f0} pizzas'}"
+                TextColor="DarkRed"
+                FontSize="18"
+                HorizontalOptions="Center"/>
+            
+            <!--servicio a domicilo-->
+
+            <HorizontalStackLayout>
+                <Switch IsToggled="False" x:Name="SwServicioDomicilio" Toggled="SwServicioDomicilio_Toggled"/>
+                <Image Source="entrega.png" HeightRequest="30" WidthRequest="30" VerticalOptions="Center"/>
+                <Label Text="Servicio a domicilio (+3.00€)" VerticalOptions="Center"/>
+            </HorizontalStackLayout>
+
+            <!--resumen-->
+
+            <Border StrokeShape="RoundRectangle 10" Stroke="Orange"  BackgroundColor="PaleGoldenrod" Padding="10">
+                <VerticalStackLayout>
+                    <Label Text="Precio base" x:Name="TxtPrecio"/>
+                    <Label Text="Ingradientes" x:Name="TxtIngradientes"/>
+                    <Label Text="ServicioDomicilio" x:Name="TxtServicioDomicilio"/>
+                    <Label Text="Cantidad" x:Name="TxtCantidad"/>
+
+                    <Label Text="{Binding pizza.total, StringFormat='Total: {0}€'}" x:Name="TxtTotal" FontSize="20" TextColor="red"/>
+                </VerticalStackLayout>
+            </Border>
+            
+            <!-- compra-->
+
+            <Button 
+                Text="Confirmar pedido"
+                x:Name="BtnConfirmarPedido"
+                Clicked="BtnConfirmarPedido_Clicked"
+                />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
