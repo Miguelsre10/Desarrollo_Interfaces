@@ -73,7 +73,7 @@
             <!--cantidad-->
 
             <Label
-                Text="Ingreadientes adiccionales (+1.50€/u)"
+                Text="Cantidad"
                 TextColor="DarkRed"
                 FontSize="18"
                 />
@@ -102,7 +102,7 @@
                     <Label Text="ServicioDomicilio" x:Name="TxtServicioDomicilio"/>
                     <Label Text="Cantidad" x:Name="TxtCantidad"/>
 
-                    <Label Text="{Binding pizza.total, StringFormat='Total: {0}€'}" x:Name="TxtTotal" FontSize="20" TextColor="red"/>
+                    <Label Text="Total:8€" x:Name="TxtTotal" FontSize="20" TextColor="red"/>
                 </VerticalStackLayout>
             </Border>
             

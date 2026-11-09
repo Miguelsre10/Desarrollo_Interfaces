@@ -7,6 +7,8 @@ public partial class PizzaPage : ContentPage
 	public Pizza pizza { get; set; } = new Pizza();
     string resumen = "";
 
+
+
     public PizzaPage()
 	{
 		InitializeComponent();
@@ -57,9 +59,10 @@ public partial class PizzaPage : ContentPage
         else{
             pizza.p_domicilio = 0;
         }
-        total += (decimal)3;
-        pizza.total = total;
-        return total+CalculoExtra();
+        total += CalculoExtra();
+        total *= pizza.Cantidad;
+        total += pizza.p_domicilio;
+        return total;
     }
 
 	private void CalculoPizza()
@@ -81,24 +84,50 @@ public partial class PizzaPage : ContentPage
         {
             pizza.Jamon = true;
         }
+        else
+        {
+            pizza.Jamon = false;
+        }
+
         if (ChkChampi.IsChecked)
         {
             pizza.Champinones = true;
         }
+        else
+        {
+            pizza.Champinones = false;
+        }
+
         if (ChkAceitunas.IsChecked)
         {
             pizza.Aceitunas = true;
         }
+        else
+        {
+            pizza.Aceitunas = false;
+        }
+
         if (ChkPina.IsChecked)
         {
             pizza.Pina = true;
         }
+        else
+        {
+            pizza.Pina = false;
+        }
+
         if (SwServicioDomicilio.IsToggled)
         {
             pizza.domicilio = true;
         }
-        CalculoTotal();
+        else
+        {
+            pizza.domicilio = false;
+        }
+
         pizza.Cantidad = (int)Slider_Cantidad.Value;
+        pizza.total = CalculoTotal();
+        TxtTotal.Text = "Total: " + pizza.total + "€";
     }
 
     private void RBtnMedidana_CheckedChanged(object sender, CheckedChangedEventArgs e)
