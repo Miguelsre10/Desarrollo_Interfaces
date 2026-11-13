@@ -16,5 +16,11 @@ namespace UD1_EjercicioSubirNota_01
         {
             InitializeComponent();
         }
+
+        private void LlbClients_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            GestionClientes gestionClientes = new GestionClientes();
+            gestionClientes.ShowDialog();
+        }
     }
 }

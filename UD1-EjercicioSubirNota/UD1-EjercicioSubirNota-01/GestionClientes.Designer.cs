@@ -33,13 +33,13 @@
             this.BtnLoadJSON = new System.Windows.Forms.Button();
             this.BtnSaveJSON = new System.Windows.Forms.Button();
             this.BtnDelete = new System.Windows.Forms.Button();
-            this.BtnModify = new System.Windows.Forms.Button();
             this.BtnAdd = new System.Windows.Forms.Button();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.BtnModify = new System.Windows.Forms.Button();
+            this.NudPhone = new System.Windows.Forms.NumericUpDown();
+            this.DtpkBirth = new System.Windows.Forms.DateTimePicker();
+            this.CBoxCity = new System.Windows.Forms.ComboBox();
+            this.TxtbSurname = new System.Windows.Forms.TextBox();
+            this.TxtbName = new System.Windows.Forms.TextBox();
             this.TxtbCode = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -57,7 +57,7 @@
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ClientData.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NudPhone)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -67,13 +67,13 @@
             this.ClientData.Controls.Add(this.BtnLoadJSON);
             this.ClientData.Controls.Add(this.BtnSaveJSON);
             this.ClientData.Controls.Add(this.BtnDelete);
-            this.ClientData.Controls.Add(this.BtnModify);
             this.ClientData.Controls.Add(this.BtnAdd);
-            this.ClientData.Controls.Add(this.numericUpDown1);
-            this.ClientData.Controls.Add(this.dateTimePicker1);
-            this.ClientData.Controls.Add(this.comboBox1);
-            this.ClientData.Controls.Add(this.textBox2);
-            this.ClientData.Controls.Add(this.textBox1);
+            this.ClientData.Controls.Add(this.BtnModify);
+            this.ClientData.Controls.Add(this.NudPhone);
+            this.ClientData.Controls.Add(this.DtpkBirth);
+            this.ClientData.Controls.Add(this.CBoxCity);
+            this.ClientData.Controls.Add(this.TxtbSurname);
+            this.ClientData.Controls.Add(this.TxtbName);
             this.ClientData.Controls.Add(this.TxtbCode);
             this.ClientData.Controls.Add(this.label6);
             this.ClientData.Controls.Add(this.label5);
@@ -84,16 +84,16 @@
             this.ClientData.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.ClientData.Location = new System.Drawing.Point(40, 31);
             this.ClientData.Name = "ClientData";
-            this.ClientData.Size = new System.Drawing.Size(643, 263);
+            this.ClientData.Size = new System.Drawing.Size(813, 263);
             this.ClientData.TabIndex = 0;
             this.ClientData.TabStop = false;
             this.ClientData.Text = "Datos de clientes";
             // 
             // BtnLoadJSON
             // 
-            this.BtnLoadJSON.Location = new System.Drawing.Point(465, 204);
+            this.BtnLoadJSON.Location = new System.Drawing.Point(614, 204);
             this.BtnLoadJSON.Name = "BtnLoadJSON";
-            this.BtnLoadJSON.Size = new System.Drawing.Size(155, 23);
+            this.BtnLoadJSON.Size = new System.Drawing.Size(155, 29);
             this.BtnLoadJSON.TabIndex = 19;
             this.BtnLoadJSON.Text = "Cargar JSON";
             this.BtnLoadJSON.UseVisualStyleBackColor = true;
@@ -101,9 +101,9 @@
             // 
             // BtnSaveJSON
             // 
-            this.BtnSaveJSON.Location = new System.Drawing.Point(465, 162);
+            this.BtnSaveJSON.Location = new System.Drawing.Point(614, 162);
             this.BtnSaveJSON.Name = "BtnSaveJSON";
-            this.BtnSaveJSON.Size = new System.Drawing.Size(155, 23);
+            this.BtnSaveJSON.Size = new System.Drawing.Size(155, 32);
             this.BtnSaveJSON.TabIndex = 18;
             this.BtnSaveJSON.Text = "Guardar JSON";
             this.BtnSaveJSON.UseVisualStyleBackColor = true;
@@ -111,75 +111,75 @@
             // 
             // BtnDelete
             // 
-            this.BtnDelete.Location = new System.Drawing.Point(465, 105);
+            this.BtnDelete.Location = new System.Drawing.Point(614, 108);
             this.BtnDelete.Name = "BtnDelete";
-            this.BtnDelete.Size = new System.Drawing.Size(155, 23);
+            this.BtnDelete.Size = new System.Drawing.Size(155, 33);
             this.BtnDelete.TabIndex = 17;
             this.BtnDelete.Text = "Eliminar";
             this.BtnDelete.UseVisualStyleBackColor = true;
             this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
-            // BtnModify
-            // 
-            this.BtnModify.Location = new System.Drawing.Point(465, 66);
-            this.BtnModify.Name = "BtnModify";
-            this.BtnModify.Size = new System.Drawing.Size(155, 23);
-            this.BtnModify.TabIndex = 16;
-            this.BtnModify.Text = "Modificar";
-            this.BtnModify.UseVisualStyleBackColor = true;
-            this.BtnModify.Click += new System.EventHandler(this.BtnModify_Click);
-            // 
             // BtnAdd
             // 
-            this.BtnAdd.Location = new System.Drawing.Point(465, 32);
+            this.BtnAdd.Location = new System.Drawing.Point(614, 27);
             this.BtnAdd.Name = "BtnAdd";
-            this.BtnAdd.Size = new System.Drawing.Size(155, 23);
+            this.BtnAdd.Size = new System.Drawing.Size(155, 34);
             this.BtnAdd.TabIndex = 15;
             this.BtnAdd.Text = "Añadir";
             this.BtnAdd.UseVisualStyleBackColor = true;
             this.BtnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
-            // numericUpDown1
+            // BtnModify
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(128, 209);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(310, 24);
-            this.numericUpDown1.TabIndex = 14;
+            this.BtnModify.Location = new System.Drawing.Point(614, 69);
+            this.BtnModify.Name = "BtnModify";
+            this.BtnModify.Size = new System.Drawing.Size(155, 33);
+            this.BtnModify.TabIndex = 16;
+            this.BtnModify.Text = "Modificar";
+            this.BtnModify.UseVisualStyleBackColor = true;
+            this.BtnModify.Click += new System.EventHandler(this.BtnModify_Click);
             // 
-            // dateTimePicker1
+            // NudPhone
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(128, 138);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(310, 24);
-            this.dateTimePicker1.TabIndex = 13;
+            this.NudPhone.Location = new System.Drawing.Point(128, 209);
+            this.NudPhone.Name = "NudPhone";
+            this.NudPhone.Size = new System.Drawing.Size(448, 24);
+            this.NudPhone.TabIndex = 14;
             // 
-            // comboBox1
+            // DtpkBirth
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(128, 173);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(310, 26);
-            this.comboBox1.TabIndex = 12;
+            this.DtpkBirth.Location = new System.Drawing.Point(128, 138);
+            this.DtpkBirth.Name = "DtpkBirth";
+            this.DtpkBirth.Size = new System.Drawing.Size(448, 24);
+            this.DtpkBirth.TabIndex = 13;
             // 
-            // textBox2
+            // CBoxCity
             // 
-            this.textBox2.Location = new System.Drawing.Point(128, 104);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(310, 24);
-            this.textBox2.TabIndex = 8;
+            this.CBoxCity.FormattingEnabled = true;
+            this.CBoxCity.Location = new System.Drawing.Point(128, 173);
+            this.CBoxCity.Name = "CBoxCity";
+            this.CBoxCity.Size = new System.Drawing.Size(448, 26);
+            this.CBoxCity.TabIndex = 12;
             // 
-            // textBox1
+            // TxtbSurname
             // 
-            this.textBox1.Location = new System.Drawing.Point(128, 65);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(310, 24);
-            this.textBox1.TabIndex = 7;
+            this.TxtbSurname.Location = new System.Drawing.Point(128, 104);
+            this.TxtbSurname.Name = "TxtbSurname";
+            this.TxtbSurname.Size = new System.Drawing.Size(448, 24);
+            this.TxtbSurname.TabIndex = 8;
+            // 
+            // TxtbName
+            // 
+            this.TxtbName.Location = new System.Drawing.Point(128, 65);
+            this.TxtbName.Name = "TxtbName";
+            this.TxtbName.Size = new System.Drawing.Size(448, 24);
+            this.TxtbName.TabIndex = 7;
             // 
             // TxtbCode
             // 
             this.TxtbCode.Location = new System.Drawing.Point(128, 31);
             this.TxtbCode.Name = "TxtbCode";
-            this.TxtbCode.Size = new System.Drawing.Size(310, 24);
+            this.TxtbCode.Size = new System.Drawing.Size(448, 24);
             this.TxtbCode.TabIndex = 6;
             // 
             // label6
@@ -262,8 +262,9 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(811, 177);
+            this.dataGridView1.Size = new System.Drawing.Size(1090, 177);
             this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -321,7 +322,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(948, 572);
+            this.ClientSize = new System.Drawing.Size(1142, 572);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.ClientData);
@@ -330,7 +331,7 @@
             this.Load += new System.EventHandler(this.GestionClientes_Load);
             this.ClientData.ResumeLayout(false);
             this.ClientData.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NudPhone)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -347,11 +348,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.NumericUpDown NudPhone;
+        private System.Windows.Forms.DateTimePicker DtpkBirth;
+        private System.Windows.Forms.ComboBox CBoxCity;
+        private System.Windows.Forms.TextBox TxtbSurname;
+        private System.Windows.Forms.TextBox TxtbName;
         private System.Windows.Forms.TextBox TxtbCode;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView dataGridView1;

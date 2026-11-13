@@ -53,6 +53,7 @@
             this.LlbClients.TabIndex = 4;
             this.LlbClients.TabStop = true;
             this.LlbClients.Text = "CLIENTES DEL GIMNASIO";
+            this.LlbClients.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LlbClients_LinkClicked);
             // 
             // LlbActiv
             // 
