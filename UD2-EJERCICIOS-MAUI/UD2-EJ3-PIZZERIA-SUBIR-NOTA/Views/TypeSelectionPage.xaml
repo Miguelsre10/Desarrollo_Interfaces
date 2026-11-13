@@ -5,10 +5,11 @@
              xmlns:views="clr-namespace:UD2_EJ3_PIZZERIA_SUBIR_NOTA.Views"
              xmlns:models="clr-namespace:UD2_EJ3_PIZZERIA_SUBIR_NOTA.Models"
              x:DataType="views:TypeSelectionPage"
-             Title="TypeSelectionPage"
+             Title="Seleccionar Tipo Pizza"
              >
     <ScrollView>
-        <VerticalStackLayout Padding="20" >
+        <VerticalStackLayout Padding="20" BackgroundColor="LightYellow">
+            <Image Source="pizza.png" HeightRequest="300" WidthRequest="300"/>
             <Label 
                 Text="Bienvenido a la pizzeria" FontSize="24" FontAttributes="Bold"
                 VerticalOptions="Center" 

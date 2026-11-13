@@ -30,8 +30,8 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.LlbClients = new System.Windows.Forms.LinkLabel();
-            this.LlbAct = new System.Windows.Forms.LinkLabel();
-            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
+            this.LlbActiv = new System.Windows.Forms.LinkLabel();
+            this.LlbReserv = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // label1
@@ -47,42 +47,42 @@
             // LlbClients
             // 
             this.LlbClients.AutoSize = true;
-            this.LlbClients.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.LlbClients.Location = new System.Drawing.Point(150, 128);
+            this.LlbClients.Location = new System.Drawing.Point(150, 131);
             this.LlbClients.Name = "LlbClients";
-            this.LlbClients.Size = new System.Drawing.Size(190, 18);
-            this.LlbClients.TabIndex = 1;
+            this.LlbClients.Size = new System.Drawing.Size(169, 16);
+            this.LlbClients.TabIndex = 4;
             this.LlbClients.TabStop = true;
             this.LlbClients.Text = "CLIENTES DEL GIMNASIO";
             // 
-            // LlbAct
+            // LlbActiv
             // 
-            this.LlbAct.AutoSize = true;
-            this.LlbAct.Location = new System.Drawing.Point(150, 167);
-            this.LlbAct.Name = "LlbAct";
-            this.LlbAct.Size = new System.Drawing.Size(186, 16);
-            this.LlbAct.TabIndex = 2;
-            this.LlbAct.TabStop = true;
-            this.LlbAct.Text = "ACTIVIDADES DEPORTIVAS";
+            this.LlbActiv.AutoSize = true;
+            this.LlbActiv.Location = new System.Drawing.Point(150, 171);
+            this.LlbActiv.Name = "LlbActiv";
+            this.LlbActiv.Size = new System.Drawing.Size(186, 16);
+            this.LlbActiv.TabIndex = 5;
+            this.LlbActiv.TabStop = true;
+            this.LlbActiv.Text = "ACTIVIDADES DEPORTIVAS";
             // 
-            // linkLabel3
+            // LlbReserv
             // 
-            this.linkLabel3.AutoSize = true;
-            this.linkLabel3.Location = new System.Drawing.Point(150, 206);
-            this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(156, 16);
-            this.linkLabel3.TabIndex = 3;
-            this.linkLabel3.TabStop = true;
-            this.linkLabel3.Text = "RESERVAR ACTIVIDAD";
+            this.LlbReserv.AutoSize = true;
+            this.LlbReserv.Enabled = false;
+            this.LlbReserv.Location = new System.Drawing.Point(150, 212);
+            this.LlbReserv.Name = "LlbReserv";
+            this.LlbReserv.Size = new System.Drawing.Size(156, 16);
+            this.LlbReserv.TabIndex = 3;
+            this.LlbReserv.TabStop = true;
+            this.LlbReserv.Text = "RESERVAR ACTIVIDAD";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(710, 424);
-            this.Controls.Add(this.linkLabel3);
-            this.Controls.Add(this.LlbAct);
+            this.Controls.Add(this.LlbActiv);
             this.Controls.Add(this.LlbClients);
+            this.Controls.Add(this.LlbReserv);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -95,8 +95,8 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.LinkLabel LlbClients;
-        private System.Windows.Forms.LinkLabel LlbAct;
-        private System.Windows.Forms.LinkLabel linkLabel3;
+        private System.Windows.Forms.LinkLabel LlbActiv;
+        private System.Windows.Forms.LinkLabel LlbReserv;
     }
 }
 

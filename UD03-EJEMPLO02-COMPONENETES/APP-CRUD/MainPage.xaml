@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="APP_CRUD.MainPage"
+             xmlns:btnComponent="clr-namespace:LIBCRUDMAUI;assembly=LIBCRUDMAUI">
+    <!-- Tras "Agregar referencia del proyecto" -->
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Image
+                x:Name="dotnet"
+                Source="dotnet_bot.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="dot net bot in a submarine number ten" />
+
+            <Label
+                Text="EJEMPLO DE UN COMPONENTE VISUAL EN NET MAUI"
+                FontSize="18"
+                FontFamily="Arial"
+                FontAttributes="Bold"/>
+
+            <btnComponent:ViewCrud x:Name="ButtonsComponent"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

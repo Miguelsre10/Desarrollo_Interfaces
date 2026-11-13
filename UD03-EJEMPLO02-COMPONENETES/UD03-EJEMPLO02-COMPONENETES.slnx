@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="APP-CRUD/APP-CRUD.csproj">
+    <Deploy Solution="Debug|*" />
+  </Project>
+  <Project Path="LIBCRUDMAUI/LIBCRUDMAUI.csproj" />
+</Solution>

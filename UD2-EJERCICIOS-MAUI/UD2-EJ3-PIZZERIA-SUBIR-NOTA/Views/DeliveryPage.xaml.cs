@@ -37,14 +37,15 @@ public partial class DeliveryPage : ContentPage
 
             // Si no hay extras, mostrar mensaje
             if (string.IsNullOrEmpty(extras))
-                extras = "Sin ingredientes extras";
+                extras = "Sin ingredientes extras\n";
 
             // Construcción del resumen del pedido
             string resumen = $"RESUMEN DEL PEDIDO\n\n" +
-                            $"Tipo de Pizza: {pizza.Tipo}\n" +
+                            $"Tipo de Pizza: {pizza.Tipo}\n\n" +
                             $"Cantidad: {pizza.Cantidad}\n\n" +
                             $"Ingredientes adicionales:\n{extras}\n" +
-                            $"Fecha de entrega: {pizza.FechaEntraga:dd/MM/yyyy}";
+                            $"Fecha de entrega: {pizza.FechaEntraga:dd/MM/yyyy}"+
+                            $"\n{pizza.FechaEntraga:HH:mm:ss}";
 
             // Mostrar el resumen en una ventana modal
             await DisplayAlertAsync("Pedido Confirmado", resumen, "OK");
