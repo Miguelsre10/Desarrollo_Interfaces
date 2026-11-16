@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="UD3-EJEMPLO03-PERSISTENCIA/UD3-EJEMPLO03-PERSISTENCIA.csproj" />
+  <Project Path="UD3-PERISTENCIA-MAUI/UD3-PERISTENCIA-MAUI.csproj">
+    <Deploy Solution="Debug|*" />
+  </Project>
+</Solution>
