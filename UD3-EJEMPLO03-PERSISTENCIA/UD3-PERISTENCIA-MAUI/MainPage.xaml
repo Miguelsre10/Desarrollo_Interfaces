@@ -7,7 +7,7 @@
 
         <Grid BackgroundColor="LightBlue" Padding="20"
               RowDefinitions="Auto" ColumnDefinitions="*">
-            <Border Stroke="Brown" StrokeThickness="2"
+            <Border Stroke="Brown" StrokeThickness="2" Padding="15"
                 StrokeShape="RoundRectangle 10" BackgroundColor="White">
 
                 <VerticalStackLayout Spacing="5">
@@ -29,7 +29,7 @@
                            Placeholder="Escribe tu nombre"
                            />
                     
-                    <!-- Nombre del cliente -->
+                    <!-- Email del cliente -->
                     <Label Text="Email:"                          
                            FontSize="Small"
                            />
@@ -39,7 +39,41 @@
                            Keyboard="Email"
                            />
                     
+                    <!-- Destino del cliente -->
+                    <Label Text="Destino Favorito:"                          
+                           FontSize="Small"
+                           />
+
+                    <Picker x:Name="PickerDestiny">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Playa</x:String>
+                                <x:String>Montaña</x:String>
+                                <x:String>Ciudad</x:String>
+                                <x:String>Aventura</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+
+                        <!-- Presupuesto del viaje-->
+                    <Label Text="Presupueto:"                          
+                           FontSize="Small"
+                           />
+
+                    <Entry x:Name="EntryBudget"
+                           Placeholder="500"
+                           Keyboard="Numeric"
+                           />
                     
+                    <!-- Botones para guardar y cargar la configuracion -->
+                    <Button x:Name="BtnSave" Text="GUARDAR" BackgroundColor="Green" WidthRequest="200"
+                            TextColor="White" Margin="0,35,0,0" Clicked="BtnSave_Clicked"/>
+
+                    <Button x:Name="BtnLoad" Text="CARGAR" BackgroundColor="Blue" WidthRequest="200"
+                            TextColor="White" Margin="0,35,0,0" Clicked="BtnLoad_Clicked"/>
+
+                    <Button x:Name="BtnDelete" Text="BORRAR" BackgroundColor="Red" WidthRequest="200"
+                            TextColor="White" Margin="0,35,0,0" Clicked="BtnDelete_Clicked"/>
 
                 </VerticalStackLayout>
 

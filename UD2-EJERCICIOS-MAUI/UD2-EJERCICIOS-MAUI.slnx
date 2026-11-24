@@ -8,4 +8,7 @@
   <Project Path="UD2-EJ3-PIZZERIA-SUBIR-NOTA/UD2-EJ3-PIZZERIA-SUBIR-NOTA.csproj" Id="0c8f7e75-394f-4036-8d7a-1d42fe38b13a">
     <Deploy Solution="Debug|*" />
   </Project>
+  <Project Path="UD2-EJ4-PUNTO-LIMPIO/UD2-EJ4-PUNTO-LIMPIO.csproj" Id="a7b6f48e-7fd5-4eee-b252-d6b5f0c29c10">
+    <Deploy Solution="Debug|*" />
+  </Project>
 </Solution>
