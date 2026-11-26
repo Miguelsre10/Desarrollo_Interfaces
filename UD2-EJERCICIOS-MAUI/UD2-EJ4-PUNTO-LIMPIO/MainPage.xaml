@@ -67,14 +67,18 @@
                 />
 
             <!-- Lista de residuos -->
-            <CollectionView x:Name="listaResiduos" ItemsSource="{Binding Residuos}">
+            <Label Text="Listado de Residuos" FontAttributes="Bold" FontSize="24"/>
+
+            <CollectionView x:Name="listaResiduos"
+                ItemsSource="{Binding Residuos}"
+                SelectionMode="Single">
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="models:Residuo">
                         <Grid>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto" />
-                                <ColumnDefinition Width="Auto" />
-                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="Auto" />
@@ -89,6 +93,11 @@
 
                 </CollectionView.ItemTemplate>
             </CollectionView>
+
+            <Label x:Name="TotalResiduos"
+                   Text="Cantidad de residuos: 0"
+                   FontAttributes="Bold"
+                   FontSize="18"/>
 
         </VerticalStackLayout>
     </ScrollView>

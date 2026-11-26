@@ -17,23 +17,39 @@ namespace UD2_EJ4_PUNTO_LIMPIO
         {
             InitializeComponent();
             BindingContext = this;
+            Residuos.CollectionChanged += Residuos_CollectionChanged;
+
         }
 
 
-        private void AddResidue_Clicked(object sender, EventArgs e)
+        private async void AddResidue_Clicked(object sender, EventArgs e)
         {
             if (ValidateEntrys())
             {
-                Residuos.Add(new Residuo()
+                bool found = false;
+                foreach ( Residuo r in Residuos)
                 {
-                    Nombre = ResidueName.Text,
-                    Tipo = ResidueType.Text,
-                    Cantidad = int.Parse(ResidueAmount.Text)
-                });
+                    if (r.Nombre.Equals(ResidueName.Text.Trim(), StringComparison.OrdinalIgnoreCase) && 
+                        r.Tipo.Equals(ResidueType.Text.Trim(), StringComparison.OrdinalIgnoreCase))
+                    {
+                        r.Cantidad += int.Parse(ResidueAmount.Text);
+                        found = true;
+                        break;
+                    }
+                }
+                if(!found) {
+                    Residuos.Add(new Residuo()
+                    {
+                        Nombre = ResidueName.Text.Trim(),
+                        Tipo = ResidueType.Text.Trim(),
+                        Cantidad = int.Parse(ResidueAmount.Text)
+                    });
+                }
+               
             }
             else
             {
-
+                await DisplayAlertAsync("Error", "Hay errores en el formulario", "Continuar");
             }
         }
 
@@ -47,7 +63,8 @@ namespace UD2_EJ4_PUNTO_LIMPIO
             {
                 return false;
             }
-            if (int.Parse(ResidueAmount.Text) < 1)
+            int num;
+            if (!(int.TryParse(ResidueAmount.Text, out num)) && num < 1)
             {
                 return false;
             }
@@ -56,8 +73,58 @@ namespace UD2_EJ4_PUNTO_LIMPIO
 
         private void RemoveResidue_Clicked(object sender, EventArgs e)
         {
+            if (listaResiduos.SelectedItem != null)
+            {
+                Residuo residuo = (Residuo)listaResiduos.SelectedItem;
 
+                Residuos.Remove(residuo);
+
+                listaResiduos.SelectedItem = null;
+            }
         }
+        private void Residuos_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+        {
+            if (e.NewItems != null)
+            {
+                foreach (Residuo r in e.NewItems)
+                {
+                    r.PropertyChanged += Residuo_PropertyChanged;
+                }
+            }
+
+            if (e.OldItems != null)
+            {
+                foreach (Residuo r in e.OldItems)
+                {
+                    r.PropertyChanged -= Residuo_PropertyChanged;
+                }
+            }
+
+            ActualizarTotal();
+        }
+
+        // Detectar cuando cambia la cantidad de un residuo
+        private void Residuo_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+        {
+            if (e.PropertyName == nameof(Residuo.Cantidad))
+            {
+                ActualizarTotal();
+            }
+        }
+
+        // Calcular la suma de todas las cantidades
+        private void ActualizarTotal()
+        {
+            int total = 0;
+
+            foreach (Residuo r in Residuos)
+            {
+                total += r.Cantidad;
+            }
+
+            TotalResiduos.Text = "Cantidad total: " + total;
+        }
+
     }
 }
 
